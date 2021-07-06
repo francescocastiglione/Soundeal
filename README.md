@@ -23,6 +23,7 @@
     <li>
       <a href="#istruzioni">Istruzioni</a>
     </li>
+    <li><a href="#caratteristiche">Caratteristiche</a></li>
     <li><a href="#nuove-funzionalità">Nuove funzionalità</a></li>
     <li><a href="#contatti">Contatti</a></li>
     <li><a href="#crediti">Crediti</a></li>
@@ -44,7 +45,16 @@ Soundeal si propone come un distributore musicale, ricoprendo un ruolo da interm
 1. Scarica il progetto e inseriscilo all'interno della cartella htdocs di xampp
 2. Crea il database di Soundeal, mediante il file soundeal_database.sql
 3. Collegati alla pagina localhost/path/public oppure localhost/path/public/homepage
-4. È stato già creato un account: email = uni399647@studium.unict.it     password = Soundeal123%
+4. È stato già creato un account: email = uni399647@studium.unict.it password = Soundeal123%
+
+### Caratteristiche
+
+1. Nella homepage è possibile ricercare samples atti alla produzione musicale
+2. Nella homepage è presente una sezione deputata alla promozione
+3. Nella pagina Servizi è possibile selezionare i servizi di streaming a cui inviare le proprie opere
+4. Nella pagina Discografia sono rese disponibili le funzioni di creazione degli album e di caricamento e riproduzione dei brani musicali
+5. Nella pagina Distribuzione viene offerta la possibilità di distribuire le proprie creazioni
+6. Nella pagina Jarvis è stato implementato un bot che affianca l'utente durante l'utilizzo del sito
 
 ### Nuove funzionalità
 
