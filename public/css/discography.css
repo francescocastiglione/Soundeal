@@ -1,0 +1,607 @@
+html {
+    font-size: 20px;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(238, 238, 238);
+    font-family: 'Archivo', sans-serif; 
+    color: #1c1c1c;    
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+nav, #mobile_nav {
+    position: fixed;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #1c1c1c;
+    padding: 30px 0;
+    color: white;
+}
+
+@media (max-width: 500px) {
+    nav {
+        top: 0;
+        width: 100%;
+        height: 80px;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 3;
+    }
+}
+
+#mobile_menu {
+    display: none;
+    margin-left: 10px;
+}
+
+@media (max-width: 500px) {
+    #mobile_menu {
+        display: inline-block;
+      }
+}
+
+#mobile_menu div {
+    width: 20px;
+    height: .5px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+#soundeal {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 500px) {
+    #soundeal{
+        display: none;
+    }
+}
+
+#soundeal img {
+    width: 80%;
+    margin-bottom: 10px;    
+}
+
+nav a, #mobile_nav a {
+    padding: 15px;
+    border-top: 1px solid rgba(225, 225, 225, .05);
+    border-bottom: 1px solid rgba(0, 0, 0, .25);    
+    color: #707070; 
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 500px) {
+    nav a {
+        display: none;
+    }
+}
+
+#current_page {
+    color: white;
+   
+}
+
+a:hover {
+    color: white;
+    background-color: #4f588d;
+}
+
+nav a img, #mobile_nav a img {
+    width: 20%;
+    margin-right: 4px;
+}
+
+nav p, #mobile_nav p {
+    margin-top: 25px;
+    color: rgba(255, 255, 255, .4);
+    font-family: 'Lexend', sans-serif;
+    text-align: center;
+    font-size: .8rem;
+}
+
+@media (max-width: 500px) {
+    nav p {
+        display: none;
+    }
+}
+
+header {
+    color: black;
+    margin-left: 200px;
+}
+
+@media (max-width: 500px) {
+    header {
+        margin-left: 0;
+        margin-top: 80px;
+    }
+}
+
+header h1 {
+    padding: 20px;
+    background-color: white;
+    color: #1c1c1c;
+    border-bottom: 1px solid #e0e4e8;
+    margin: 0;
+    font-size: 1.8rem;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    letter-spacing: 1px;
+}
+
+p.info {
+    background-color: rgb(212, 214, 255);
+    margin: 10px;
+    padding-top: 0;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    border-bottom: 1px solid #e0e4e8;
+    line-height: 120%;
+}
+
+p.info img {
+    width: 38px;
+    display: block;
+}
+
+#description {
+    width: 75%;
+    padding-top: 20px;
+    background-color: white;    
+    font-family: 'Roboto', sans-serif;   
+}
+
+#albums {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 205px;
+}
+
+@media(max-width:500px) {
+    #albums {
+        margin: 0;
+    }
+}
+
+
+.general_box {
+    width: 18.5%;
+    height: 100%;
+    margin: 5px;
+    box-shadow: -1px 4px 28px 0 rgba(0,0,0,0.75);
+    background-color: rgba(238, 238, 238, 0);
+}
+
+.album_box {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+
+@media(max-width:500px) {
+    .general_box {
+        width: 100%;
+    }
+}
+
+
+
+
+.album_box:hover {
+    transform: scale(1.01);
+}
+
+.delete_confirm {
+    z-index: 2;
+    background-color: rgba(240, 248, 255, 0.685);
+    height: 60px;
+    width: 90%;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(49, 49, 49);
+}
+
+.delete_confirm p {
+    font-size: .65rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.delete_confirm div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.delete_confirm div p {
+    border: 1px solid black;
+    cursor: pointer;
+    padding: 2%;
+    margin-top: 1px;
+    box-shadow: -1px 1px 1px 0 rgba(0,0,0,0.75);
+}
+
+.no:hover {
+    background-color: black;
+    color: white;
+}
+
+.yes:hover {
+    background-color: #F24336;
+    color: white;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, .3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.top_bar {
+    z-index: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 5px 10px 0 10px;
+}
+
+.top_bar img {
+    width: 10%;
+    cursor: default;
+}
+
+.album_box h1 {
+    text-transform: uppercase;
+    color: white;
+    z-index: 1;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Lexend', sans-serif;
+    padding: 10px;
+}
+
+.album_box h1:hover {
+    margin-left: 6px;   
+}
+
+.show_tracks_button p {
+    margin: 3px;
+}
+
+.album_tracks {
+    max-height: 129.2px;
+    overflow-y: scroll;
+}
+
+.track_box {
+    border-bottom: 1px solid rgba(0, 0, 0, .5); 
+    font-family: 'Lexend', sans-serif;
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: -1px 1px 1px 0 rgba(0,0,0,0.75);
+    position: relative;
+}
+
+.track_box p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: .7rem;
+}
+
+.player {
+    width: 100%;
+    margin-right: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.player img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.player img:hover {
+    border-bottom: 0.1px solid black;
+}
+
+.player_bar {
+    width: 70%;
+    height: 3px;
+    background-color: #1c1c1c;
+    display: flex;
+    border-radius: 50px;
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+.play_bar {
+    height: 3px;
+    background-color: grey;
+    border-radius: 30px;
+}
+
+.pointer {
+    width: 8px;
+    height: 8px;
+    background-color: grey;
+    border-radius: 50%;
+    margin-left: -5px;
+    margin-top: -2px;
+    transform: scale(2);
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #1c1c1c;
+    border-radius: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.new_album_track {
+    font-family: 'Lexend', sans-serif;
+    color: #4f588d;
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 3px;
+}
+
+form {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upload_file {
+    height: 200px;
+    width: 25%;
+    border: 2px dashed #4f588d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    position: relative;
+}
+
+@media(max-width: 700px) {
+    .upload_file {
+        width: 70%;
+    }
+}
+
+.upload_file:active {
+    background-color:aliceblue;
+}
+
+.delete_button {
+    width: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.upload_file label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.upload_file label span {
+    color: #4f588d;
+    overflow: hidden;
+    word-break: break-all;
+}
+
+.upload_file label img {
+    width: 30%;
+    margin-bottom: 10px;
+}
+
+.music_title {
+    width: 25%;
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media(max-width: 700px) {
+    .music_title {
+        width: 70%;
+    }
+}
+
+.music_title input {
+    border-bottom: 1px solid #4f588d;
+    border-right: 1px solid #4f588d;
+    border-top: none;
+    border-left: none;
+    outline: none;
+    height: 20px;
+    width: 100%;
+    color: #4f588d;
+    font-size: .8rem;
+    padding-left: 9px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-top: 10px;
+}
+
+.music_title p {
+    color: #ff0000;
+    font-size: .5rem;
+    font-weight: bolder;
+}
+
+.create {
+    background-color: #4f588d;
+    color: white;
+    font-size: .9rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-top: 20px;
+    height: 40px;
+}
+
+.create:hover {
+    background-color: #59649e;
+}
+
+.create:disabled {
+    background-color: #171a29;
+    cursor: default;
+}
+
+
+
+#select_elements {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: 'Lexend', sans-serif;
+    font-size: .4rem;
+    color: #4f588d;
+    text-align: center;
+}
+
+#select_elements select {
+    background-color: white;
+    height: 25px;
+    outline: none;
+    width: 100%;
+}
+
+select option {
+    color: #4f588d;
+}
+
+
+#upload {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 200px;
+}
+
+@media(max-width:500px) {
+    #upload {
+        flex-direction: column;
+        margin-left: 0;
+    }
+}
+
+
+#upload section {
+    width: 25%;
+}
+
+@media(max-width:500px) {
+    #upload section {
+        width: 100%;
+    }
+}
+
+#upload_album {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: 2px dashed #4f588d;
+    background-color: white;
+}
+
+#upload_album a {
+    background-color: transparent;
+    width: 50%;
+}
+
+#upload_album a img {
+    width: 100%;
+}
+
+#upload_album h2 {
+    margin-top: -23px;
+    color: #0153FF;
+}
+
+.err, .server_error {
+    text-align: center;
+    color: #EE5253;
+    font-size: .58rem;
+    font-weight: bolder;
+}
+
+.server_error {
+    margin: 0;
+}
+
+#input_box label span {
+    overflow: hidden;
+}
+
+.exit_button {
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 30px;
+}
+
+.exit_button:hover {
+    background-color: transparent;
+}
+
+.exit_button img {
+    width: 100%;
+}
+
+.delete_track_button {
+    cursor: pointer;
+    width: 20px;
+    position: absolute;
+    right: 5px;
+    bottom: 10px;
+}

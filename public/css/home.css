@@ -1,0 +1,132 @@
+header h1 {
+    font-family: 'Archivo', sans-serif; 
+    padding: 20px;
+    background-color: white;
+    color: #4f588d;
+    border-bottom: 1px solid #e0e4e8;
+    margin: 0;
+    font-size: 1.8rem;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    letter-spacing: 1px;
+}
+
+@media(max-width:500px) {
+    header h1 {
+        font-size: 1.3rem;
+    }
+}
+
+
+p.info {
+    background-color: rgb(212, 214, 255);
+    margin: 10px;
+    padding: 20px;
+    border-bottom: 1px solid #e0e4e8;
+    line-height: 120%; 
+}
+
+#description {
+    background-color: rgb(255, 255, 255);
+    width: 70%;
+}
+
+p.info a {
+    color: rgb(122, 122, 122);
+}
+p.info a:hover {
+    padding-left: 3px;
+    background-color: transparent;
+}
+
+article {
+    margin-left: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+#user_container {
+    margin-top: 40px;
+    width: 50%;
+    border: 3px solid white;
+    height: 200px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+}
+
+@media (max-width: 500px) {
+    article {
+        margin: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    #user_container {
+        flex-direction: column;
+    }
+}
+
+#user_container:hover {
+    transform: scale(1.01);
+}
+
+#user_container img {
+    height: 100%;
+    box-shadow: -1px 4px 28px 0 #4f588dc2;
+    background-color: rgb(212, 214, 255);
+}
+
+#user_container div {
+    margin-left: 20px;
+    font-family: 'Lexend', sans-serif;
+    color: #4f588d;
+    font-weight: bold;
+}
+
+#user_container div p {
+    box-shadow: -1px 4px 28px 0 #4f588dc2;
+    padding: 4px 10px;
+    cursor: default;
+}
+
+#user_container div p:hover {
+    transform: scale(1.1);
+}
+
+#home_links {
+    height: 20px;
+    margin-top: 150px;
+    margin-left: 200px;
+    display:flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+@media (max-width: 500px) {
+    #home_links {
+        display: none;
+    }
+}
+
+#home_links a {
+    width: 2.5%;
+    border: 2px solid #1c1c1c;
+    background-color: rgb(179, 180, 216);
+    padding: 12px;    
+}
+
+#home_links a:hover {
+    transform: scale(1.20);
+}
+
+#home_links a img {
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+

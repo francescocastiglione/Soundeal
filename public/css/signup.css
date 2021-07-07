@@ -1,0 +1,244 @@
+html {
+    font-size: 20px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../images/signup_background.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+    font-family: 'Lexend', sans-serif;
+}
+
+
+@media (max-width: 892px) {
+    body {
+      background-color: black;
+    }
+}
+
+@media (max-width: 892px) {
+    form {
+        height: 90vh;
+    }
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, .7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#soundeal_logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8%;
+}
+
+.main {
+    text-align: center;
+    padding: 20px 40px;
+    z-index: 1;
+    width: 850px;
+    background-color: rgba(255, 255, 255, 0.04);
+    box-shadow: -1px 4px 28px 0 rgba(0,0,0,0.75);
+}
+
+.main h1 {
+    border-bottom: 4px solid #4f588d;
+    display: inline-block;
+    font-size: 2rem;
+    letter-spacing: 3px;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 700px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+.box {
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.box label {
+    font-size: .9rem;
+    margin-bottom: 6.8px;
+    margin-top: 18px;
+ }
+
+.box input {
+    height: 47px;
+    max-width: 100%;
+    background-color: rgba(255, 255, 255, 0.94);
+    border: none;
+    outline: none;
+    color: rgb(34, 34, 34);
+    font-size: .8rem;
+    padding-left: 15px;
+}
+
+.box input.error {
+    border: 2px solid #8d4f4f;
+}
+
+.box p, #input_box p {
+    text-align: left;
+    color: #8d4f4f;
+    font-size: .5rem;
+    font-weight: bolder;
+}
+
+.box p.server_error, #input_box p.server_error {
+    margin: 0;
+}
+
+#input_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    position: relative;
+    
+}
+
+#file_input {
+    display:none;
+}
+
+#input_box label {
+    color: white;
+    height: 30px;
+    width: 40%;
+    border: 2px solid rgba(255, 255, 255, 0.94);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .8rem;
+    padding: 3px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#input_box label span {
+    overflow: hidden;
+}
+
+@media (max-width: 400px) {
+    #input_box label span {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+#input_box label:active {
+    color: #4f588d;
+    border: 2px solid #4f588d;
+}
+
+#input_box label:hover {
+    background-color: #4f588d31;
+}
+
+#input_box label img {
+    width: 5%;
+    margin-right: 10px;
+}
+
+#input_box .delete_button {
+    width: 20px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    right: 200px;
+}
+
+.agree {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    margin-top: 15px;
+    font-size: .7rem;
+}
+
+.agree label a {
+    color: grey;
+    text-decoration: none;
+}
+
+.agree label a:hover {
+    text-decoration: underline;
+}
+
+.remember_user input {
+    cursor: pointer;
+}   
+
+#signup {
+    background-color: #4f588d;
+    color: white;
+    font-size: .9rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-top: 20px;
+    height: 60px;
+}
+
+#signup:hover {
+    background-color: #59649e;
+}
+
+#signup:disabled {
+    background-color: #171a29;
+    cursor: default;
+}
+
+.new_user {
+    margin-top: 10px;
+    font-size: .75rem;
+}
+
+.new_user a {
+    color: #6977bd;
+    text-decoration: none;
+}
+
+.new_user a:hover {
+    text-decoration: underline;
+    color: #8394e9;
+}
+
+.hidden {
+    display: none;
+}
+
+input:-webkit-autofill{
+    transition: background-color 5000s ease-in-out 0s;
+}

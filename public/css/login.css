@@ -1,0 +1,161 @@
+html {
+    font-size: 20px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../images/login_background.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+    font-family: 'Lexend', sans-serif;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, .7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#soundeal_logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8%;
+}
+
+.main {
+    text-align: center;
+    z-index: 1;
+    width: 385px;
+    padding: 60px 40px;
+    background-color: rgba(255, 255, 255, 0.04);
+    box-shadow: -1px 4px 28px 0 rgba(0,0,0,0.75);
+}
+
+@media (max-width: 500px) {
+    .main {
+        width: 100%;
+    }
+}
+
+.main h1 {
+    border-bottom: 4px solid #4f588d;
+    display: inline-block;
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 35px;  
+    letter-spacing: 3px;
+}
+
+.box {
+    height: 45px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.94);
+}
+
+.box img {
+    padding: 5px;
+    width: 25px;
+    height: 20px;
+}
+
+.box input {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: rgb(34, 34, 34);
+    font-size: .8rem;
+}
+
+#password_box input {
+    color: #4f588d;
+}
+
+#password_box input.visible_password {
+    color:rgb(34, 34, 34);
+}
+
+input:-webkit-autofill{
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.box label {
+    display: none;
+}
+
+p, h3{
+    text-align: left;
+    color: #8d4f4f;
+    font-size: .5rem;
+    font-weight: bolder;
+}
+
+h3 {
+    font-size: .75rem;
+}
+
+#password_box {
+    margin-top: 15.5px;
+    margin-bottom: 15.5px;
+}
+
+.box .show_password {
+    cursor: pointer;
+    padding: 10px;
+}
+
+.remember_user {
+    text-align: left;
+    margin: 10px 0;
+    font-size: .9rem;
+}
+
+.remember_user input {
+    cursor: pointer;
+}
+
+#login {
+    background-color: #4f588d;
+    color: white;
+    font-size: .9rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+#login:hover {
+    background-color: #59649e;
+}
+
+.new_user {
+    font-size: .75rem;
+    margin-top: 15.5px;
+}
+
+.new_user a {
+    color: #6977bd;
+    text-decoration: none;
+}
+
+.new_user a:hover {
+    text-decoration: underline;
+    color: #8394e9;
+}
+
+.hidden {
+    display: none;
+}

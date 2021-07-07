@@ -1,0 +1,122 @@
+html {
+    font-size: 20px;
+}
+
+body {
+    margin: 0;
+    background-color: #121212;
+    color: whitesmoke;
+}
+
+header {
+    background-color: black;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    font-family: 'Karla', sans-serif;
+    font-size: 2.2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: -1px 4px 28px 0 rgba(141, 141, 141, 0.75);
+}
+
+.service_title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}   
+
+.service_title img {
+    width: 10%;
+    margin: 10px 20px;
+}
+
+.search_bar {
+    position: relative;
+    margin: 10px;
+}
+
+.search_bar input{
+    padding: 10px;
+    padding-left: 40px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 2px solid white;
+    font-size: .8rem;
+    color: white;
+    outline: none;   
+}
+
+::placeholder {
+    color: rgb(209, 209, 209);
+}
+
+.search_bar img {
+    width: 19px;
+    position: absolute;
+    top: 24.5px;
+    left: 13px;
+}
+
+article {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 15px;
+}
+
+.album_box {
+    width: 12.5%;
+    height: 263px;
+    margin: 50px 20px;
+    padding: 16px;
+    background-color: #181818;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Karla', sans-serif;
+    cursor: pointer;
+}
+
+.album_box:hover {
+    background-color: #242424;
+}
+
+.album_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.album_box img {
+    width: 153px;
+    height: 153px;
+    margin-bottom: 16px;
+    border-radius: 15px;
+    box-shadow: -1px 4px 28px 0 rgba(0,0,0,0.75);
+}
+
+.album_info h1, .album_info p {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.album_info h1 {
+    margin: 6px 0;
+}
+
+.album_info p {
+    color: rgb(179, 179, 179);
+    font-size: .8rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.no_albums {
+    font-family: 'Karla', sans-serif;
+    margin-left: 50px;
+}
