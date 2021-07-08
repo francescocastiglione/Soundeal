@@ -36,8 +36,6 @@ function sendReply(user_input, chat_box, chat_input) {
 
         case (user_input.includes("quali domande") || user_input.includes("che domande") || user_input.includes("cosa sai fare") || user_input.includes("che sai fare")): reply_message = "Puoi farmi domande relative alle funzionalità delle varie pagine del sito o avere mie informazioni personali. Per la lista completa di domande, consulta il file jarvis.js."; break;
 
-        case (user_input.includes("abbonamento") || user_input.includes("premium") || user_input.includes("standard")): reply_message = "Dalla pagina impostazioni è possibile passare a Soundeal Premium."; break;
-
         case (user_input.includes("ciao") || user_input.includes("buongiorno") || user_input.includes("buonasera") || user_input.includes("chi sei") || user_input.includes("cosa servi") || user_input.includes("cosa sei")): reply_message = greetings[Math.floor(Math.random() * greetings.length)]; break;
         
         case (user_input.includes("help") || user_input.includes("bisogno di aiuto") || user_input.includes("aiutarmi")): reply_message = "Fammi una domanda. Che cosa vuoi sapere?"; break;
