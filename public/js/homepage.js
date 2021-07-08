@@ -137,6 +137,7 @@ function searchOnFreesound(event) {
     }
     if (input_value === '') {
         results_container.innerHTML = '';
+        loading_icon.classList.add("hidden");
     }
     else {
         const token = document.head.querySelector('meta[name="csrf-token"]').getAttribute('content');
