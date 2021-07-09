@@ -32,7 +32,6 @@ use Illuminate\Support\Facades\Route;
     Route::get('/signup/email/{q}', 'SignupController@checkEmail');
 
     Route::get('/home', 'HomeController@home');
-    Route::get('/home/content/', 'HomeController@homeUser');
 
     Route::get('/discography', 'DiscographyController@discography');
     Route::get('/discography/albums', 'DiscographyController@getAlbums');
