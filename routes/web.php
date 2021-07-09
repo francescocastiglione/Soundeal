@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Route;
     Route::get('/homepage/spotify/{spotify_artist_name}', 'HomepageController@searchOnSpotify');
     Route::get('/homepage/tracks/{id}', 'HomepageController@topTracks');
     Route::post('/homepage/freesound', 'HomepageController@searchOnFreesound');
+    Route::get('/homepage/artist', 'HomepageController@getArtists');
     Route::get('/contacts', 'HomepageController@contacts');
     Route::get('/privacy', 'HomepageController@privacy');
 

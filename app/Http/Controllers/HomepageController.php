@@ -5,6 +5,7 @@
     use Illuminate\Http\Client\Response;
     use Illuminate\Support\Facades\Session;
     use Illuminate\Http\Request;
+    use App\Models\Artist;
 
     class HomepageController extends BaseController {
         public function homepage() {        
@@ -113,6 +114,11 @@
 
             }
             return $samples->json();
+        }
+
+        public function getArtists() {
+            $artists = Artist::all();
+            return $artists;
         }
     
     }

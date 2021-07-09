@@ -137,6 +137,7 @@ function searchOnFreesound(event) {
     }
     if (input_value === '') {
         results_container.innerHTML = '';
+        loading_icon.classList.add("hidden");
     }
     else {
         const token = document.head.querySelector('meta[name="csrf-token"]').getAttribute('content');
@@ -227,8 +228,8 @@ function onTopTracksJson(json) {
         }
     }
 
-    const tracks_container1 = artist_container.querySelector('#first_page');
-    const tracks_container2 = artist_container.querySelector('#second_page');
+    const tracks_container1 = artist_container.querySelector('.first_page');
+    const tracks_container2 = artist_container.querySelector('.second_page');
     const top_track_list = json.tracks;
     let top_tracks_number = top_track_list.length;
     if (top_tracks_number > 8)
@@ -301,8 +302,8 @@ function onX(event) {
     const x_button = event.currentTarget;
     const artist_box = x_button.parentNode;
     const search_button = artist_box.querySelector('.spotify_box');
-    const tracks_container1 = artist_box.querySelector('#first_page');
-    const tracks_container2 = artist_box.querySelector('#second_page');
+    const tracks_container1 = artist_box.querySelector('.first_page');
+    const tracks_container2 = artist_box.querySelector('.second_page');
     const more_tracks_button = artist_box.querySelector('.button');
     x_button.classList.add('hidden');
     search_button.classList.remove('hidden');
@@ -315,7 +316,7 @@ function onX(event) {
 
 function showMoreTracks(event) {
     const more_tracks_button = event.currentTarget;
-    const tracks_container2 = more_tracks_button.parentNode.querySelector('#second_page');
+    const tracks_container2 = more_tracks_button.parentNode.querySelector('.second_page');
     if(tracks_container2.classList.contains('hidden')) {
         tracks_container2.classList.remove('hidden');
         more_tracks_button.textContent = "Mostra meno";
@@ -349,8 +350,65 @@ function searchOnSpotify(event) {
     fetch("homepage/spotify/" + artist_name).then(onResponse, onError).then(onArtistJson);
 }
 
-const artist_button_list = document.querySelectorAll('.spotify_box');
-for(let artist_button of artist_button_list){
-    artist_button.addEventListener("click", searchOnSpotify);
-}
 let spotify_artist_name;
+
+function getArtistsJson(json) {
+    const artist_container = document.querySelector("#artist_container");
+    for (let item of json) {
+        const artist_box = document.createElement("div");
+        const image = document.createElement("img");
+        const name = document.createElement("p");
+        const spotify_box = document.createElement("div");
+        const spotify_search = document.createElement("p");
+        const spotify_search_logo = document.createElement("img");
+        const x = document.createElement("p");
+        const spotify_loading = document.createElement("img");
+        const search_results1 = document.createElement("div");
+        const search_results2 = document.createElement("div");
+        const more_tracks = document.createElement("p");
+
+        image.src = item.image;
+        name.textContent = item.name;
+        spotify_search.textContent = "Cerca su Spotify";
+        spotify_search_logo.src = "images/spotify.png";
+        x.textContent = "X";
+        spotify_loading.src = "images/loading.gif";
+        more_tracks.textContent = "Visualizza altro";
+
+        artist_box.classList.add("artist_box");
+        image.classList.add("artist_img");
+        name.classList.add("artist_name");
+        spotify_box.classList.add("spotify_box");
+        x.classList.add("spotify_box_x");
+        x.classList.add("hidden");
+        spotify_loading.classList.add("spotify_loading");
+        spotify_loading.classList.add("hidden");
+        search_results1.classList.add("search_results");
+        search_results1.classList.add("first_page");
+        search_results2.classList.add("search_results");
+        search_results2.classList.add("second_page");
+        search_results2.classList.add("hidden");
+        more_tracks.classList.add("button");
+        more_tracks.classList.add("hidden");
+
+        artist_container.appendChild(artist_box);
+        artist_box.appendChild(image);
+        artist_box.appendChild(name);
+        artist_box.appendChild(spotify_box);
+        spotify_box.appendChild(spotify_search);
+        spotify_box.appendChild(spotify_search_logo);
+        artist_box.appendChild(x);
+        artist_box.appendChild(spotify_loading);
+        artist_box.appendChild(search_results1);
+        artist_box.appendChild(search_results2);
+        artist_box.appendChild(more_tracks);
+        
+        spotify_box.addEventListener("click", searchOnSpotify);
+    }
+}
+
+function getArtists() {
+    fetch("homepage/artist").then(onResponse, onError).then(getArtistsJson);
+}
+
+getArtists();
