@@ -66,6 +66,13 @@ INDEX new_service_name(service_name),
 FOREIGN KEY(album_id) REFERENCES albums(upc) on update cascade on delete cascade,
 FOREIGN KEY(service_name) REFERENCES services(name) on update cascade on delete cascade) Engine = 'InnoDB';
 
+create table artists (
+id integer PRIMARY KEY AUTO_INCREMENT,
+name varchar(15),
+image varchar(1024),
+created_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+updated_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP) Engine = 'InnoDB';
+
 DELIMITER //
 create trigger add_track
 after insert on tracks
@@ -87,7 +94,6 @@ update albums set tracks_number = tracks_number - 1 where upc = old.album_id;
 end if;
 end //
 DELIMITER ;
-
 
 insert into services (name, logo, details) values ('Spotify', 'images/spotify.png', 'La piattaforma dominante nel business dello streaming musicale mondiale.');
 
@@ -176,3 +182,15 @@ insert into tracks (isrc, title, album_id, author, type, genre, language, audio_
 insert into tracks (isrc, title, album_id, author, type, genre, language, audio_file) values ('IT60ab0c1300', 'Old Holborn', 960302777414, 'Francesco Castiglione', 'Brano originale', 'Progressive Rock', 'strumentale', 'tracks/60ab0c1300077Old Holborn.mp3');
 
 insert into tracks (isrc, title, album_id, author, type, genre, language, audio_file) values ('IT60ab0c5762', 'Use Your Illusion', 124181528500, 'Francesco Castiglione', 'Brano originale', 'Elettronica', 'strumentale', 'tracks/60ab0c57625d4Use Your Illusion.mp3');
+
+insert into artists (name, image) values ('Billie Eilish', 'images/billie_eilish.png');
+
+insert into artists (name, image) values ('Eminem', 'images/eminem.png');
+
+insert into artists (name, image) values ("Guns N' Roses", 'images/guns_n_roses.png');
+
+insert into artists (name, image) values ('AC/DC', 'images/acdc.png');
+
+insert into artists (name, image) values ('Green Day', 'images/green_day.png');
+
+insert into artists (name, image) values ('Gorillaz', 'images/gorillaz.png');
