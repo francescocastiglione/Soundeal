@@ -46,6 +46,7 @@ Soundeal si propone come un distributore musicale, ricoprendo un ruolo da interm
 2. Crea il database di Soundeal, mediante il file soundeal_database.sql
 3. Collegati alla pagina localhost/path/public oppure localhost/path/public/homepage
 4. È stato già creato un account: email = uni399647@studium.unict.it password = Soundeal123%
+5. Non sono presenti le credenziali necessarie all'utilizzo delle API Rest e della Notification via email, dunque dovrai inserire le tue all'interno del file .env.
 
 ### Caratteristiche
 
